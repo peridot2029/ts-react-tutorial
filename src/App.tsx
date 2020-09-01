@@ -1,11 +1,12 @@
 import React from 'react';
-import Greetings from './components/Greetings';
+// import MyForm from './components/MyForm';
+import Counter from './components/Counter';
 
 const App: React.FC = () => {
-  const onClick = (name: string) => {
-    console.log(`${name} says hello`);
-  };
-  return <Greetings name='Hello' onClick={onClick} />;
+  // const onSubmit = (form: { name: string; description: string }) => {
+  //   console.log(form);
+  // };
+  return <Counter />;
 };
 
 export default App;
