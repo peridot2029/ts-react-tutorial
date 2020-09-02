@@ -1,14 +1,14 @@
-# TypeScript
+# TypeScript - useState()
 
-## 1. `useState<number>` - Generics
+## 1. 타입스크립트 이용한 `useState` 사용법 및 이벤트 다루기
 
-`useState()`에 제네릭을 사용해서 해당 상태가 어떤 타입을 가졌는지 설정한다.  
-이 경우 **제네릭을 생략하면 알아서 유추**하기 때문에 생략해도 된다.
+`useState<number>` 제네릭을 사용해서 해당 상태가 어떤 타입을 가졌는지 설정한다. 이 경우 **제네릭을 생략하면 알아서 유추**하기 때문에 생략해도 된다.
 
 ```ts
+// src/components/Counter.tsx
 import React, { useState } from 'react';
 
-function Counter() {  
+function Counter() {
   const [count, setCount] = useState(0);
 
   const onIncrease = () => setCount(count + 1);
@@ -24,6 +24,18 @@ function Counter() {
   );
 }
 export default Counter;
+```
+
+```ts
+// src/App.tsx
+import React from 'react';
+import Counter from './components/Counter';
+
+const App: React.FC = () => {
+  return <Counter />;
+};
+
+export default App;
 ```
 
 `useState()`에 제네릭을 사용할 경우는 상태가 `null` 또는 상태의 타입이 까다로운 구조로  

@@ -1,10 +1,8 @@
-# TypeScript
+# TypeScript - Input State 관리 방법
 
-## 1. Input state 관리
+## 1. Input State 관리 방법과 이벤트 다룰 때 타입 지정 방법
 
-이벤트를 다룰 때 타입을 다뤄야 하므로 타입을 지정하는 법 정리.
-
-아래의 `onChange`, `hadleSumbit`은 일단 **타입을 지정하는 법 모르기 때문에  `any` 타입으로 설정**한다.
+이벤트를 다룰 때 타입을 다뤄야 하므로 타입을 지정하는 법 정리, 아래의 `onChange`, `hadleSumbit`은 일단 **타입을 지정하는 법 모르기 때문에 `any` 타입으로 설정**한다.
 
 ```ts
 // src/components/MyForm.tsx
@@ -33,7 +31,7 @@ function MyForm({ onSubmit }: MyFormProps) {
 export default MyForm;
 ```
 
-그런 다음에 마우스 커서를  `onChange`, `onSumbmit`에 올린다.  
+그런 다음에 마우스 커서를 `onChange`, `onSumbmit`에 올린다.
 
 - `onChage` → `React.ChangeEvent<HTMLInputElement>`
 - `onSubmit` → `React.FormEvent<HTMLFormElement>`
