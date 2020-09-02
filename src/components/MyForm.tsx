@@ -28,6 +28,7 @@ function MyForm({ onSubmit }: MyFormProps) {
       name: '',
       description: '',
     });
+
     if (!inputRef.current) {
       return;
     }
