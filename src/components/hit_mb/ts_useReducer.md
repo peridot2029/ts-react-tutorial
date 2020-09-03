@@ -49,7 +49,7 @@ export default Counter;
 `Action` 타입을 정의함으로써 리듀서에 자동완성이 되어 개발에 편의성 더해주고 액션을 디스패치 할 때, 액션에 대한 타입 검사가 이루어지므로 사소한 실수를 사전에 방지할 수 있다.
 
 ```ts
-// src/compoents/ReducerSample
+// src/components/ReducerSample
 import React, { useReducer } from 'react';
 type Color = 'red' | 'orange' | 'yellow';
 
